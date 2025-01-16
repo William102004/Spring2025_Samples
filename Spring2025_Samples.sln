@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring2024_samples", "Sample1\Spring2024_samples.csproj", "{7CD38D40-C908-49FE-B3C9-98E9E9C1A3D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.ecommerce", "ClassLibrary1\Library.ecommerce.csproj", "{D8144ED5-1572-477E-96E4-1FB3D3F7912F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD38D40-C908-49FE-B3C9-98E9E9C1A3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD38D40-C908-49FE-B3C9-98E9E9C1A3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD38D40-C908-49FE-B3C9-98E9E9C1A3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD38D40-C908-49FE-B3C9-98E9E9C1A3D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8144ED5-1572-477E-96E4-1FB3D3F7912F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8144ED5-1572-477E-96E4-1FB3D3F7912F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8144ED5-1572-477E-96E4-1FB3D3F7912F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8144ED5-1572-477E-96E4-1FB3D3F7912F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
