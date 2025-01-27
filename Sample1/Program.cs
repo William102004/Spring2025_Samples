@@ -14,7 +14,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            var lastKey = 1;
+           
             Console.WriteLine("welcome to Amazon");
             
             Console.WriteLine("C. Create new inventory item ");
@@ -23,7 +23,7 @@ namespace MyApp
             Console.WriteLine("D. delete an inventory item");
             Console.WriteLine("Q: Quit");
 
-            List<Product?> list = ProductServiceProxy.GetCurrent().Products;
+            List<Product?> list = ProductServiceProxy.Current.Products;
              
             char choice;
         
@@ -37,9 +37,12 @@ namespace MyApp
                 {
                 case 'C':
                 case 'c' :      
+                    ProductServiceProxy.Current.AddorUpdate(new Product
+                    {
+                        Name = Console.ReadLine()
+                    });
                     list.Add(new Product
                     {
-                        Id = lastKey++,
                         Name = Console.ReadLine()
                     });
                     break;
@@ -53,7 +56,10 @@ namespace MyApp
                     int selection = int.Parse(Console.ReadLine() ?? "-1");
                     var selectedProd = list.FirstOrDefault(p => p.Id == selection);
                    if(selectedProd != null) 
+                   { 
                     selectedProd.Name = Console.ReadLine() ?? "Error";
+                    ProductServiceProxy.Current.AddorUpdate(selectedProd);
+                   } 
                     break;
                 case 'D':
                 case 'd':

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Spring2024_samples/1.0.0": {
+        "dependencies": {
+          "Library.ecommerce": "1.0.0"
+        },
+        "runtime": {
+          "Spring2024_samples.dll": {}
+        }
+      },
+      "Library.ecommerce/1.0.0": {
+        "runtime": {
+          "Library.ecommerce.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Spring2024_samples/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library.ecommerce/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
