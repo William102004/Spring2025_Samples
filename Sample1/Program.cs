@@ -37,7 +37,7 @@ namespace MyApp
                 {
                 case 'C':
                 case 'c' :      
-                    ProductServiceProxy.Current.Add(new Product
+                    ProductServiceProxy.Current.AddorUpdate(new Product
                     {
                         Name = Console.ReadLine()
                     });
@@ -56,7 +56,10 @@ namespace MyApp
                     int selection = int.Parse(Console.ReadLine() ?? "-1");
                     var selectedProd = list.FirstOrDefault(p => p.Id == selection);
                    if(selectedProd != null) 
+                   { 
                     selectedProd.Name = Console.ReadLine() ?? "Error";
+                    ProductServiceProxy.Current.AddorUpdate(selectedProd);
+                   } 
                     break;
                 case 'D':
                 case 'd':

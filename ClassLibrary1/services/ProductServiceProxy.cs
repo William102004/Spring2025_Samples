@@ -1,4 +1,5 @@
 using System;
+
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
@@ -44,14 +45,16 @@ namespace Library.ecommerce.services;
     }  
     
     public List<Product?> Products{get; private set; }
-    public Product Add(Product product)
+    public Product AddorUpdate(Product product)
     {
         if(product.Id == 0)
         {
             product.Id = lastKey + 1;
+            Products.Add(product);
         }
 
-        Products.Add(product);
         return product;
     }
+
 }
+
