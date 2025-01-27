@@ -41,10 +41,6 @@ namespace MyApp
                     {
                         Name = Console.ReadLine()
                     });
-                    list.Add(new Product
-                    {
-                        Name = Console.ReadLine()
-                    });
                     break;
                 case 'R':
                 case 'r':
@@ -65,8 +61,7 @@ namespace MyApp
                 case 'd':
                     Console.WriteLine("Which product would you like to update");
                     selection = int.Parse(Console.ReadLine() ?? "-1");
-                    selectedProd = list.FirstOrDefault(p => p.Id == selection);
-                   list.Remove(selectedProd);
+                    ProductServiceProxy.Current.Delete(selection);
                    break;
                 case 'Q':
                 case 'q':

@@ -56,5 +56,19 @@ namespace Library.ecommerce.services;
         return product;
     }
 
+   public  Product?  Delete(int id)
+   {
+        if(id == 0)
+        {
+            return null;
+        }
+
+        Product? product = Products.FirstOrDefault(p => p?.Id == id);
+        Products.Remove(product);
+
+        return product;
+        
+   }
+
 }
 
